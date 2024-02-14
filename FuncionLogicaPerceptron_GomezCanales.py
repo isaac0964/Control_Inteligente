@@ -68,6 +68,9 @@ Y = np.array([-1, 1, -1, 1, -1, 1, 1, 1])
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 ax.scatter(X[0, :], X[1, :], X[2, :], c=Y, cmap='rainbow')
+ax.set_xlabel(r"$x_1$")
+ax.set_ylabel(r"$x_2$")
+ax.set_zlabel(r"$x_3$")
 
 # Crear Neurona tres entradas y dos salidas --------------------------------------
 neurona = Neurona(3, 1)
