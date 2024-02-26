@@ -1,4 +1,4 @@
-# Clasficacion Perceptron
+# Funcion Logica ~((A v B)^)C Perceptron
 # Angel Isaac Gomez Canales
 # 14/02/2024
 
