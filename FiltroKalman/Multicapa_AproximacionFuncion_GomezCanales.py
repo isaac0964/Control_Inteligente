@@ -4,7 +4,7 @@
 # Importar librerias necesarias
 import numpy as np
 import matplotlib.pyplot as plt
-import MLP
+import MLP_Kalman
 #from mayavi import mlab
 
 # Definir funcion a aproximar
@@ -26,8 +26,8 @@ ax.plot_surface(xx, yy, Y.reshape(xx.shape), cmap=plt.cm.plasma, linewidth=0.2, 
 ax.set_title("Funcion Original")
 
 # Crear red y entrenarla 
-net = MLP.MLP((2, 32, 16, 8, 1), activacion_oculta=MLP.tanh, activacion_salida=MLP.lineal, eta=0.5)
-net.fit(X, Y.reshape((1, -1)), epochs=500, batch_size=32)
+net = MLP_Kalman.MLP_Kalman((2, 32, 16, 8, 1), activacion_oculta=MLP_Kalman.tanh, activacion_salida=MLP_Kalman.lineal, eta=0.01)
+net.fit(X, Y.reshape((1, -1)), epochs=100)
 
 #Predecir con la red para cada punto de la malla
 zz = (net.predict(X)).reshape(xx.shape)
