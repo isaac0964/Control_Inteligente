@@ -1,5 +1,5 @@
 # Clase para Red Neuronal Multicapa entrenada con filtro de Kalman
-# Angel Isaac Gomez Canales
+# Angel Isaac Gomez Canales  22/04/2024
 
 import numpy as np
 import matplotlib.pyplot as plt
