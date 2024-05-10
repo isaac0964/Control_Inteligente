@@ -33,7 +33,7 @@ class NN_PID():
         return y
     
     # Metodo para entrenar la red
-    def fit(self, X, e, epochs=100, p=0.5, q=0, r=0.1):
+    def fit(self, X, e, p=0.5, q=0, r=0.1):
         # Crear Matrices P, Q y R
         P = p * np.eye(self.nW)  # Tamaño de Npesos x Npesos (Li)
         Q = q * np.eye(self.nW)  # Tamaño de Npesos x Npesos (Li)
@@ -61,6 +61,3 @@ class NN_PID():
         P = P - np.dot(K, H.dot(P))
         if Q.any():  # Agregar Q solo si es diferente de 0
             P = P + Q
-
-n = NN_PID(3)
-print(n.predict(np.array([[2], [3], [2]]))[0])
