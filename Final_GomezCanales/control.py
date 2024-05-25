@@ -107,8 +107,6 @@ def Callback(msg, args):
 		bandera_control = 1
 
 
-
-
 rospy.init_node("topic_publisher", anonymous=True)
 
 # Generar suscriptor y publicador
